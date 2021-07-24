@@ -2,7 +2,6 @@ import os
 import requests
 import pandas as pd
 import datetime
-import time
 
 # Helper function to call the LTA API
 def call_lta_api(url,
@@ -69,7 +68,7 @@ def call_taxi_api():
     # Securely obtain our API key from the environmental variables set by PyCharm
     api_key = os.getenv('datamall_api_key')
 
-    # Set
+    # Set the headers required for authenticating into the API
     headers = {
         'AccountKey': api_key,
         'accept': 'application/json'
